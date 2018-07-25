@@ -6,5 +6,5 @@ router = DefaultRouter()
 router.register(r'', TodoModelViewSet, base_name='todos')
 
 urlpatterns = [
-    url(r'^', include(router.urls)),
+    url(r'^', include(router.urls), name='todos'),
 ]
