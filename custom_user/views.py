@@ -46,7 +46,7 @@ class LoginUserView(GenericAPIView):
     def post(self, request, *args, **kwargs):
         serializer = self.get_serializer(data=request.data)
         if serializer.is_valid():
-            email = serializer.validated_data['email']
+            email = serializer.validated_data['email'].lower()
             password = serializer.validated_data['password']
             company = serializer.validated_data['auth_company']
 
