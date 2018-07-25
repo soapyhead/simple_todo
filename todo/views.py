@@ -10,6 +10,7 @@ from companies.models import Company
 class TodoModelViewSet(ModelViewSet):
     permission_classes = (IsAuthenticated,)
     serializer_class = TodoSerializer
+    http_method_names = ['get', 'post', 'patch', 'delete', 'head', 'options']
 
     def get_queryset(self):
         if self.request.user.is_superuser:
