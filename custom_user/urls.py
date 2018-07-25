@@ -4,8 +4,8 @@ from custom_user.views import (
 )
 
 urlpatterns = [
-    url(r'^sign_up/$', CreateUserView.as_view()),
-    url(r'^login/$', LoginUserView.as_view()),
-    url(r'^logout/$', LogoutUserView.as_view()),
-    url(r'^profile/$', UserView.as_view()),
+    url(r'^sign_up/$', CreateUserView.as_view(), name='sign_up'),
+    url(r'^login/$', LoginUserView.as_view(), name='login'),
+    url(r'^logout/$', LogoutUserView.as_view(), name='logout'),
+    url(r'^profile/$', UserView.as_view(), name='profile'),
 ]
